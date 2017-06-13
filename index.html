@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>GIT Workshop</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/night.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +24,111 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h2>GIT workshop</h2>
+					<h3>for SVN users</h3>
+				</section>
+				<section>
+					<section>
+						<h2>Main differences</h2>
+						<p><img width="200px" src="./img/cent-vcs.PNG"/></p>
+						<p><small>Alt + click</small></p>
+						<p><img width="200px" src="./img/dist-vcs.PNG"/></p>						
+					</section>
+					<section>
+						<p><img height="200px" src="./img/changes-time.PNG"/></p>
+						<p><img height="200px" src="./img/snapshot-time.PNG"/></p>
+					</section>
+					<section>
+						<p>Nearly Every Operation Is Local - very fast</p>
+						<p class="fragment">Git Has Integrity (checksum)</p>
+						<p class="fragment">Git Generally Only Adds Data</p>
+					</section>
+				</section>				
+				<section>
+					<h3>The Three States</h3>
+					<img src="./img/three-states.PNG" />
+				</section>
+				<section>
+					<h4>Recording Changes to the Repository</h4>
+					<img src="./img/file-status.PNG" />
+				</section>
+				<section>
+					<section>
+						<h4>Working with origin</h4>
+						<img src="./img/git-clone.PNG" />					
+					</section>
+					<section>						
+						<img src="./img/git-push-to-origin.PNG" />					
+					</section>
+					<section>						
+						<img src="./img/git-origin-different.PNG" />					
+					</section>
+					<section>
+						<h4>Pull wihout rebase</h4>						
+						<img src="./img/merge-remote.PNG" />					
+					</section>
+					<section>
+						<h4>Pull with rebase</h4>						
+						<img src="./img/merge-rebase.PNG" />					
+					</section>
+					<section>
+						<h4>Pull with rebase - result</h4>						
+						<img src="./img/fast-forward.PNG" />					
+					</section>
+				</section>
+				<section>
+					<section>
+						<h4>Cherry-pick</h4>
+						<img src="./img/cherry-pick.PNG" />					
+					</section>
+					<section>
+						<h4>Cerry-pick result</h4>
+						<img src="./img/cherry-pick-after.PNG" />					
+					</section>
+				</section>
+				<section>
+					<section>
+						<h4>Stash</h4>
+						<img src="./img/stash-needed.PNG" />
+					</section>					
+					<section>
+						<img src="./img/sta.PNG" />
+					</section>
+					<section>
+						<img src="./img/stash.png"/>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h4>Workflows</h4>
+						<img src="./img/centralized-workflow.PNG"/>
+					</section>
+					<section>
+						<h4>Workflows</h4>
+						<img src="./img/integration-manager-workflow.PNG"/>
+					</section>
+					<section>
+						<h4>Workflows</h4>
+						<img src="./img/wokflow-director.PNG"/>
+					</section>
+				</section>
+				<section>
+					<h4>A successful git branching model</h4>
+					<img height="500px" src="./img/git-model@2x.png"/>
+				</section>
+				<section>
+					<h3>References</h3>
+					<ul>
+						<li>
+							<a href="http://nvie.com/posts/a-successful-git-branching-model/">http://nvie.com/posts/a-successful-git-branching-model</a>
+							
+						</li>
+						<li>
+							<p><img height="200px" src="./img/pro-git.PNG"/></p>
+						</li>
+					</ul>
+				</section>
 			</div>
 		</div>
 
@@ -37,11 +140,13 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				transition: 'fade',
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true }
 				]
 			});
 		</script>
